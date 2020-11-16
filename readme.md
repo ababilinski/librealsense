@@ -1,6 +1,21 @@
 <p align="center"><img src="doc/img/realsense.png" width="70%" /><br><br></p>
 
 -----------------
+## Unity Crash Fix (Dragging & Dropping Crash)
+**This fork was created to fix the Unity Crash that happens when running the Realsense Wrapper.**
+[Issues:7787](https://github.com/IntelRealSense/librealsense/issues/7787)
+
+## Resolution Description
+The issue can resolved by following these steps: 
+1. Compile the `Intel.RealSense.dll` & `realsense2.dll` from the current master branch 
+2. replace the plugins that were imported with the `.unitypackage` with the ones produced in step 1
+
+### Fixed Plugin Files
+Attached are the re-compiled library files from commit [[d8f5d42]](https://github.com/IntelRealSense/librealsense/commit/d8f5d4212df85522a14b4a7b83bf4d54219b06fa) 
+
+To replicate the fix, download the zip and replace the plugin folder located `Assets/RealSenseSDK2.0/Plugins/`
+**Fixed Plugin Folder:** [Plugins.zip](https://github.com/IntelRealSense/librealsense/files/5548513/Plugins.zip)
+
 
 ## Overview
 **Intel® RealSense™ SDK 2.0** is a cross-platform library for Intel® RealSense™ depth cameras (D400 series and the SR300) and the [T265 tracking camera](./doc/t265.md).
